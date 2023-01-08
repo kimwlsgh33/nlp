@@ -1,16 +1,17 @@
 package com.example.demo.nlp.objects;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+public class Apple extends Food {
 
-@Getter @Setter @RequiredArgsConstructor
-public class Apple implements Food {
-    private int carbohydrate = 10;
-    private int protein = 1;
-    private int fat = 0;
-    private String name = "사과";
-    private int weight = 100;
-    private int size = 10;
-    private int calorie = 50;
+    public Apple(int weight, int size ) {
+        super();
+        this.name = "사과";
+        this.weight = weight;
+        this.size = size;
+        // 탄단지
+        this.carbohydrate = weight * 0.8;
+        this.protein = weight * 0.1;
+        this.fat = weight * 0.1;
+        // 에너지
+        this.calorie = weight * 0.4;
+    }
 }
